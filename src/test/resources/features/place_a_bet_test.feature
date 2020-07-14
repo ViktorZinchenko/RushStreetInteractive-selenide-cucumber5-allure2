@@ -19,7 +19,7 @@ Feature: Scenarios for testing of betting
 
     Examples:
       | sports | betAmount | userName | password  |
-      | tennis | 2.50      | qatest   | password1 |
+      | tennis | 1         | qatest   | password1 |
 
   @loggedInPlayer
   Scenario Outline: Logged in player places a bet
@@ -34,4 +34,4 @@ Feature: Scenarios for testing of betting
 
     Examples:
       | sports | betAmount | userName | password  |
-      | soccer | 1.00      | qatest   | password1 |
+      | soccer | 1         | qatest   | password1 |
