@@ -28,8 +28,7 @@ public class PlaceBetPage {
     }
 
     public void clickPlaceBetButton() {
-        placeBetButton.should(enabled);
-        placeBetButton.click();
+        placeBetButton.should(enabled).click();
     }
 
     public void verifyFeedbackTitle(String message) {

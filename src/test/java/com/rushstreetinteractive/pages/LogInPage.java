@@ -3,6 +3,7 @@ package com.rushstreetinteractive.pages;
 import com.codeborne.selenide.SelenideElement;
 import com.rushstreetinteractive.hooks.Hooks;
 
+import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.$;
 import static com.rushstreetinteractive.Runner.mainPage;
 
@@ -18,7 +19,7 @@ public class LogInPage {
     public void verifyStatusOfPlayer() {
         if (menuCashier.isDisplayed()) {
             mainPage.clickMenu();
-            logoutButton.click();
+            logoutButton.should(enabled).click();
             welcomeMessage.click();
         } else {
             Hooks.logger.info("Player is not logged in");
